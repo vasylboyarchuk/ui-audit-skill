@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Audits Figma files against Refactoring UI and Practical UI principles — writes a structured report page directly into the Figma file",
   "bin": {
-    "ui-audit-skill": "./bin/install.js"
+    "ui-audit-skill": "bin/install.js"
   },
   "keywords": ["claude", "claude-code", "skill", "figma", "ui-audit", "design", "refactoring-ui"],
   "author": "vasylboyarchuk",
