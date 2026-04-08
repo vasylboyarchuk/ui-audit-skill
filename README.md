@@ -42,11 +42,36 @@ claude skill install https://github.com/vasylboyarchuk/ui-audit-skill/raw/main/u
 
 ---
 
-## Other agents (Cursor, Windsurf, GPT-4, etc.)
+## OpenAI Codex CLI
 
-Use [`PROMPT.md`](PROMPT.md) as a system prompt or custom instruction in your agent. It contains the full audit workflow in plain language — no Claude-specific packaging.
+**1. Connect Figma MCP** in your Codex config (`~/.codex/config.toml`):
 
-Paste it into your agent's system prompt, then give it a Figma URL and say "run the ui audit".
+```toml
+[mcp_servers.figma]
+command = "npx"
+args = ["-y", "@figma/mcp-server"]
+env = { FIGMA_ACCESS_TOKEN = "your-token-here" }
+```
+
+**2. Add the audit instructions** to your project's `AGENTS.md`:
+
+```bash
+curl -s https://raw.githubusercontent.com/vasylboyarchuk/ui-audit-skill/main/PROMPT.md >> AGENTS.md
+```
+
+Or for a one-time global install, append to `~/.codex/instructions.md` instead.
+
+**3. Run:**
+
+```
+codex "run the ui audit on https://www.figma.com/design/YOUR_FILE_KEY/Your-File-Name"
+```
+
+---
+
+## Other agents (Cursor, Windsurf, etc.)
+
+Use [`PROMPT.md`](PROMPT.md) as a system prompt or custom instruction. Paste it into your agent's system prompt, connect Figma MCP, then give it a Figma URL and say "run the ui audit".
 
 ---
 
