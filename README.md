@@ -19,10 +19,8 @@ A Claude Code skill that audits Figma files against UI design principles from *R
 ## Install
 
 ```bash
-claude skill install https://github.com/your-username/ui-audit-skill/raw/main/ui-audit.skill
+claude skill install https://github.com/vasylboyarchuk/ui-audit-skill/raw/main/ui-audit.skill
 ```
-
-> Replace `your-username` with the actual GitHub username once the repo is live.
 
 ## Usage
 
