@@ -41,4 +41,6 @@ All 50 rules live in [`references/rules.md`](references/rules.md). Each rule has
 
 ## Contributing / editing
 
-See [CLAUDE.md](CLAUDE.md) for instructions on how to add rules, edit the workflow, and publish updates.
+- Rules: edit [`references/rules.md`](references/rules.md) — follow the existing format (ID, explanation, Violation, Fix)
+- Workflow: edit [`SKILL.md`](SKILL.md) — the main sections cover how frames are selected, how rules are checked, and how the audit page is built
+- Versioning: use semantic versioning and add an entry to [`CHANGELOG.md`](CHANGELOG.md)
